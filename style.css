@@ -65,6 +65,24 @@ a {
   text-decoration: none;
 }
 
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.ui-icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 button,
 dialog {
   color: inherit;
@@ -454,8 +472,7 @@ main,
   border-radius: 50%;
   background: var(--ink);
   color: var(--lime);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.05rem;
 }
 
 .button-bright {
@@ -464,6 +481,9 @@ main,
 }
 
 .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   padding: 0.7rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   color: var(--text);
@@ -921,6 +941,8 @@ main,
   right: 1rem;
   bottom: 1rem;
   display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.65rem 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
@@ -1002,6 +1024,9 @@ main,
 }
 
 .case-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid #8d8b82;
   font-size: 0.78rem;
@@ -1377,9 +1402,17 @@ main,
   transition: transform 0.45s var(--ease), background 0.3s ease;
 }
 
+.contact-arrow .ui-icon {
+  transition: transform 0.45s var(--ease);
+}
+
 .contact-arrow:hover {
   background: #fff;
-  transform: rotate(45deg) scale(1.04);
+  transform: scale(1.04);
+}
+
+.contact-arrow:hover .ui-icon {
+  transform: translate(0.12em, -0.12em);
 }
 
 .contact-links {
@@ -1448,6 +1481,9 @@ main,
 }
 
 .site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   justify-self: end;
   color: var(--text);
 }
@@ -1483,6 +1519,9 @@ main,
 }
 
 .dialog-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   justify-self: end;
   padding: 0.7rem 0.95rem;
   border: 1px solid var(--line);
