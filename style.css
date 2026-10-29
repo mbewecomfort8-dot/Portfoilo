@@ -761,6 +761,123 @@ main,
   width: min(100%, 1220px);
 }
 
+.stage-caption {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 1rem 0 clamp(7rem, 12vw, 11rem);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.stage-caption span {
+  color: #77756d;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stage-caption p {
+  max-width: 690px;
+  margin: 0;
+  color: #44433d;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.loantrack-sequence {
+  margin-bottom: clamp(7rem, 12vw, 11rem);
+}
+
+.sequence-intro {
+  display: grid;
+  grid-template-columns: 0.5fr 1.25fr 0.75fr;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.sequence-intro .case-label {
+  align-self: start;
+  color: #77756d;
+}
+
+.sequence-intro h4 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5.5vw, 5.8rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.93;
+}
+
+.sequence-intro h4 em {
+  color: #64703f;
+  font-weight: 500;
+}
+
+.sequence-intro > p:last-child {
+  margin: 0;
+  color: #5f5e57;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.loantrack-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 4.5rem);
+  align-items: start;
+}
+
+.loantrack-shot {
+  min-width: 0;
+  margin: 0;
+}
+
+.loantrack-shot-action {
+  margin-top: clamp(4rem, 9vw, 9rem);
+}
+
+.loantrack-shot .browser-frame {
+  border-color: rgba(17, 17, 15, 0.16);
+  box-shadow: 0 28px 70px rgba(26, 31, 20, 0.16);
+}
+
+.loantrack-shot .browser-frame:hover {
+  box-shadow: 0 40px 90px rgba(26, 31, 20, 0.24);
+}
+
+.loantrack-shot figcaption {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1rem;
+  margin-top: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-dark);
+}
+
+.loantrack-shot figcaption > span {
+  color: #77756d;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.loantrack-shot figcaption strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.loantrack-shot figcaption p {
+  max-width: 520px;
+  margin: 0;
+  color: #5f5e57;
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
 .browser-frame:hover {
   transform: translateY(-8px) scale(1.006);
   box-shadow: 0 48px 110px rgba(18, 26, 9, 0.4);
@@ -1674,6 +1791,43 @@ main,
   .desktop-stage {
     min-height: 420px;
     padding: 2rem 1rem;
+  }
+
+  .stage-caption {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-bottom: 5.5rem;
+  }
+
+  .loantrack-sequence {
+    margin-bottom: 5.5rem;
+  }
+
+  .sequence-intro {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .sequence-intro h4 {
+    font-size: clamp(2.8rem, 14vw, 4.4rem);
+  }
+
+  .sequence-intro > p:last-child {
+    font-size: 0.84rem;
+  }
+
+  .loantrack-gallery {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .loantrack-shot-action {
+    margin-top: 0;
+  }
+
+  .loantrack-shot figcaption {
+    grid-template-columns: 36px 1fr;
   }
 
   .browser-bar {
